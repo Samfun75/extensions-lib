@@ -12,7 +12,7 @@ plugins {
 
 val ver = "16-rc4"
 version = ver
-group = "com.github.aniyomiorg"
+group = "com.github.samfun75"
 
 android {
     compileSdk = 36
