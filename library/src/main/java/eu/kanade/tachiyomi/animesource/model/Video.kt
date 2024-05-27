@@ -15,6 +15,12 @@ enum class ChapterType {
     Other,
 }
 
+enum class DecryptionType(val type: String) {
+    CRYPTO_KEY("cryptokey"),
+    DECRYPTION_KEY("decryption_key"),
+    CENC_DECRYPTION_KEY("cenc_decryption_key"),
+}
+
 /**
  * A class defining a timestamp. Displayed as video chapters in the app.
  *
@@ -65,6 +71,7 @@ data class Video(
     val ffmpegVideoArgs: List<Pair<String, String>> = emptyList(),
     val internalData: String = "",
     val initialized: Boolean = false,
+    val getDecryptionKey: (() -> Pair<DecryptionType, String>)? = null
 ) {
     @Deprecated(
         message = "Use the new Video constructor",
