@@ -18,7 +18,7 @@ data class Video(val url: String,
                  val headers: Headers? = null,
                  val subtitleTracks: List<Track> = emptyList(),
                  val audioTracks: List<Track> = emptyList(),
-                 val getDecryptionKey: (() -> Pair<DecryptionType, String>)? = null
+                 val getDecryptionKey: (() -> (Pair<DecryptionType, String>)?)? = null
 ) {
     constructor(url: String,
                 quality: String,
