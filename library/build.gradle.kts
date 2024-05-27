@@ -10,7 +10,7 @@ plugins {
 
 val ver = "14"
 version = ver
-group = "com.github.aniyomiorg"
+group = "com.github.samfun75"
 
 android {
     compileSdk = 34
