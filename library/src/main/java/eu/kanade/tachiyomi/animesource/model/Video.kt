@@ -17,11 +17,18 @@ data class Video(val url: String,
                  var videoUrl: String?,
                  val headers: Headers? = null,
                  val subtitleTracks: List<Track> = emptyList(),
-                 val audioTracks: List<Track> = emptyList()
+                 val audioTracks: List<Track> = emptyList(),
+                 val getDecryptionKey: (() -> Pair<DecryptionType, String>)? = null
 ) {
     constructor(url: String,
                 quality: String,
                 videoUrl: String?,
                 uri: Uri? = null,
                 headers: Headers? = null) : this(url, quality, videoUrl, headers)
+
+    enum class DecryptionType(val type: String) {
+        CRYPTO_KEY("cryptokey"),
+        DECRYPTION_KEY("decryption_key"),
+        CENC_DECRYPTION_KEY("cenc_decryption_key"),
+    }
 }
