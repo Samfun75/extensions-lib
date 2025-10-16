@@ -71,7 +71,7 @@ data class Video(
     val ffmpegVideoArgs: List<Pair<String, String>> = emptyList(),
     val internalData: String = "",
     val initialized: Boolean = false,
-    val getDecryptionKey: (() -> Pair<DecryptionType, String>)? = null
+    val getDecryptionKey: (() -> List<Pair<DecryptionType, String>>?)? = null
 ) {
     @Deprecated(
         message = "Use the new Video constructor",
