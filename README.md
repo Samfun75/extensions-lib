@@ -17,7 +17,7 @@ Then add the dependency:
 
 ```kotlin
 dependencies {
-    compileOnly("com.github.aniyomiorg:extensions-lib:v16")
+    compileOnly("com.github.aniyomiorg:extensions-lib:v17")
 }
 ```
 > [!NOTE]

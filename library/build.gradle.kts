@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.dokka)
 }
 
-val ver = "17-rc2"
+val ver = "17"
 version = ver
 group = "com.github.aniyomiorg"
 
@@ -103,5 +103,5 @@ dokka {
 }
 
 mavenPublishing {
-    coordinates("com.github.aniyomiorg", "extensions-lib", "17-rc2")
+    coordinates("com.github.aniyomiorg", "extensions-lib", "17")
 }
